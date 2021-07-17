@@ -1,38 +1,226 @@
-.App {
-  text-align: center;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #555;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+    list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title-header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 2rem;
+    border-bottom: 1px solid #ffeaa7;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.task-form {
+    border:  1px solid #eee;
+    border-radius: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+.task-form .title {
+    font-weight: 500;
+    padding: 15px 10px;
+    background-color: #ffeaa7;
+    display: flex;
+    justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.close-form {
+    width: 30px;
+    height: 30px;
+    line-height: 23px;
+    text-align: center;
+    border-radius: 50%;
 }
+
+.close-form:hover {
+    background: #d63031;
+    color: #fff;
+}
+
+.task-form form {
+    padding: 0 10px;
+}
+
+.form-control .input-name {
+    padding: 20px 0;
+}
+
+.form-control .input-name label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-control .input-name input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eee;
+}
+
+.form-control .input-status {
+    padding-bottom: 20px;
+}
+
+.form-control .input-status label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-control .input-status select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eee;
+}
+
+.form-control .input-status select option {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.ctrl-task-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ctrl-task-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    color: #fff;
+    outline: none;
+    background-color: #00b894;
+
+}
+
+.ctrl-task-form button:last-child {
+    background: #d63031;
+}
+
+.wrapped {
+    padding: 50px 0;
+}
+
+.task-control {
+    padding-bottom: 30px;
+}
+
+.sort-form {
+    position: relative;
+}
+
+.add-student, .sort-ctrl {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background: #0984e3;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    display: inline-block;
+    width: 100%;
+}
+
+.sort-ctrl {
+    background: #6c5ce7;
+    width: 100%;
+    position: relative;
+}
+
+.sort-ctrl {
+    display: block;
+}
+
+.sort-form .dropdown-menu-sort {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 100%;
+    left: 0;
+    background: #4b6584;
+    color: #fff;
+    display: none;
+}
+
+.sort-form:hover .dropdown-menu-sort {
+    display: block;
+}
+
+.sort-form .dropdown-menu-sort li {
+    padding: 6px 10px;
+    text-align: center;
+}
+
+.sort-form .dropdown-menu-sort li:hover {
+    background: #6c5ce7;
+}
+
+.search-ctrl input {
+    width: 70%;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.search-ctrl button {
+    width: 30%;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: #00cec9;
+}
+
+.task-content table,
+.task-content table tr,
+.task-content table th,
+.task-content table td {
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.task-content table {
+    width: 100%;
+}
+
+.task-content table tr td:first-child,
+.task-content table tr th:first-child {
+    width: 5%;
+}
+
+.task-content table tr td:nth-child(2),
+.task-content table tr th:nth-child(2) {
+    width: 50%;
+}
+
+.task-content table tr td:nth-child(3),
+.task-content table tr th:nth-child(3) {
+    width: 20%;
+}
+
+.task-content table tr td:last-child,
+.task-content table tr th:last-child {
+    width: 25%;
+}
+
+.task-content table .ctrl-edit, .task-content table .ctrl-delete {
+    background: #26de81;
+    padding: 8px 25px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.task-content table .ctrl-delete {
+    background: #eb3b5a;
+    margin-right: 0;
+}
+
