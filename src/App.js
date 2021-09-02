@@ -19,32 +19,6 @@ class App extends Component {
         }
     }
 
-    // addItem = (valueName, valueStatus ,index) => {
-    //     const editting = {
-    //         editStatus: false,
-    //         editTaskIndex: null,
-    //     };
-    //     if (index === null) {
-    //         this.setState({
-    //             taskItems: this.state.taskItems.concat({
-    //                 name: valueName,
-    //                 status: valueStatus,
-    //             }),
-    //             editting: editting,
-    //         })
-    //     } else {
-    //         let taskItems = this.state.taskItems;
-    //         taskItems[index] = {
-    //             name: valueName,
-    //             status: valueStatus,
-    //         }
-    //         this.setState({
-    //             taskItems: taskItems,
-    //             editting: editting,
-    //         })
-    //     }
-    // }
-
     editTask = (index) => {
         const editting = {
             editStatus: true,
@@ -80,22 +54,6 @@ class App extends Component {
             </div>
         );
     }
-
-    // componentDidUpdate() {
-    //     window.localStorage.setItem('key', JSON.stringify(this.state.taskItems));
-    // }
-
-    // componentDidMount() {
-    //     let item = window.localStorage.getItem('key');
-    //     if (item === null) {
-    //         return
-    //     } else {
-    //         this.setState({
-    //             taskItems: JSON.parse(item)
-    //         })
-    //     }
-    // }
-    
 }
 
 export default App;
